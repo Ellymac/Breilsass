@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+a = Article.create([{ title: 'Star Wars', content: '1234567' }, { title: 'Film', content: '789456134' },
+  { title: 'Star Wars', content: '1234567' }, { title: 'Film', content: '789456134' },
+  { title: 'Star Wars', content: '1234567' }, { title: 'Film', content: '789456134' },
+  { title: 'Star Wars', content: '1234567' }, { title: 'Film', content: '789456134' },
+  { title: 'Star Wars', content: '1234567' }, { title: 'Film', content: '789456134' }])
+
+u = User.create([{admin: 'true', username: 'user1', password: 'pass1', email: 'user1@email.com'},
+  {admin: 'false', username: 'user2', password: 'pass2', email: 'user2@email.com'},
+  {admin: 'false', username: 'user3', password: 'pass3', email: 'user3@email.com'}])
