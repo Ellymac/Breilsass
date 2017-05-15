@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates :admin, presence: true
+  validates :admin, :default => false
   validates :username, presence: true, length: { maximum: 50 }, uniqueness: { case_sensitive: false }
   validates :email, presence: true, length: { maximum: 255 }, format: { with:
     /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i }, uniqueness: { case_sensitive: false }

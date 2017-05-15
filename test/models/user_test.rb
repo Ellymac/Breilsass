@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   def setup
-    @user = User.new(admin: true, username: "testUser", email: "testUser@test.com", password: "foobar", password_confirmation: "foobar")
+    @user = User.new(admin: true, username: "testUser", email: "testUser@test.com", password: "foobaroo", password_confirmation: "foobaroo")
   end
 
   test "should be valid" do
@@ -65,7 +65,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "password should have a minimum length" do
-    @user.password = @user.password_confirmation = "a" * 8
+    @user.password = @user.password_confirmation = "a" * 7
     assert_not @user.valid?
   end
 end
