@@ -1,0 +1,9 @@
+<%= @otherpages.each do |article| %>
+  <div class="col-md-4 article-padding">
+  <a href="<%= article[:link] %>"><p><strong><%= article[:title] %></strong></p></a>
+  <small><p style="margin-top:-10px"> <%= article[:date].strftime("Published: %F") %> | <a href="<%= article[:link] %>"><em>Source: CoinDesk</em></a></a></p></small>
+  <p>
+  <%= article[:description] %>
+  </p>
+  </div>
+<% end %>
