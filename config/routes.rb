@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'news/new'
+
   root 'static_pages#home'
 
   get 'contact' => 'static_pages#contact'
@@ -8,14 +10,14 @@ Rails.application.routes.draw do
   get 'users/new'
   get  '/signin' => 'users#new'
 
-  get '/actu/alsace' => 'news#articles'
-  get '/actu/bretagne' => 'news#articles'
-  get '/actu/67' => 'news#articles'
-  get '/actu/68' => 'news#articles'
-  get '/actu/22' => 'news#articles'
-  get '/actu/29' => 'news#articles'
-  get '/actu/35' => 'news#articles'
-  get '/actu/56' => 'news#articles'
+  get '/actu/alsace' => 'news#show'
+  get '/actu/bretagne' => 'news#show'
+  get '/actu/67' => 'news#show'
+  get '/actu/68' => 'news#show'
+  get '/actu/22' => 'news#show'
+  get '/actu/29' => 'news#show'
+  get '/actu/35' => 'news#show'
+  get '/actu/56' => 'news#show'
 
   get '/bonsplans/alsace' => 'other_pages#deals'
   get '/bonsplans/bretagne' => 'other_pages#deals'
