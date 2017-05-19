@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
 
-  def show
-    @news = New.all
+  def articles
+    #@news = New.all
     require 'rss'
     require 'open-uri'
     rss_results = []
