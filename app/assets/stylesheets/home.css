@@ -3,10 +3,6 @@ body {
   padding-bottom: 20px;
 }
 
-.navbar {
-  margin-bottom: 20px;
-}
-
 div[class="jumbotron"] h1 {
 	color: red;
 }

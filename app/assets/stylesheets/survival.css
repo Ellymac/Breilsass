@@ -5,7 +5,7 @@
  */
 
 body {
-    background: url('background.jpg') no-repeat center center fixed;
+    padding-top: 30px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -32,22 +32,6 @@ p {
 hr {
     max-width: 400px;
     border-color: #999999;
-}
-
-.brand,
-.address-bar {
-    display: none;
-}
-
-.navbar-brand {
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.navbar-nav {
-    font-weight: 400;
-    letter-spacing: 3px;
 }
 
 .img-full {

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#characterLeft').text('Plus que 140 caractères');
+    $('#characterLeft').text('140 caractères restants');
     $('#message').keydown(function () {
         var max = 140;
         var len = $(this).val().length;
@@ -10,7 +10,7 @@ $(document).ready(function(){
         }
         else {
             var ch = max - len;
-            $('#characterLeft').text('Plus que ' + ch + ' caractères');
+            $('#characterLeft').text(ch + ' caractères restants');
             $('#btnSubmit').removeClass('disabled');
             $('#characterLeft').removeClass('red');
         }
