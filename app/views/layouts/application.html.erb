@@ -32,8 +32,6 @@
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="../">BREILSASS</a>
         </div>
@@ -74,7 +72,6 @@
             <li class="active"><a href="../survie">GUIDE DE SURVIE</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../signin">S'IDENTIFIER</a></li>
           <% if logged_in? %>
           <li><%= link_to "UTILISATEURS", '#' %></li>
           <li class="dropdown">
@@ -104,8 +101,8 @@
     </div>
 
     <footer class="footer">
-      <p class="text-muted">Tous droits réservés.</p>
-      <a href="../about">À propos</a>
+      <p class="text-muted">Copyright &copy; Breilsass 2017
+      <a href="../about">À propos</a></p>
       <ul class="social-network social-circle">
         <li><a target="_blank" href="http://cts-strasbourg.eu/" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
         <li><a target="_blank" href="https://facebook.com/CtsStrasbourg/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
