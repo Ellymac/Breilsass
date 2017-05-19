@@ -5,7 +5,7 @@
 <title><%= title %></title>
   <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
@@ -32,6 +32,8 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="../">BREILSASS</a>
@@ -70,7 +72,7 @@
                 <li><a href="../lieux/bretagne">Bretagne</a></li>
               </ul>
             </li>
-            <li class="active"><a href="../survie">GUIDE DE SURVIE</a></li>
+            <li><a href="../survie">GUIDE DE SURVIE</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
@@ -88,7 +90,7 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "S'IDENTIFIER", login_path %></li>
+          <li class="active"><%= link_to "S'IDENTIFIER", login_path %></li>
         <% end %>
             <li><a href="../contact">CONTACT</a></li>
           </ul>
