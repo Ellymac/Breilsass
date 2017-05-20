@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'users/new'
   get  '/signup' => 'users#new'
 
+  resources :account_activations, only: [:edit]
+
   get '/actu/alsace' => 'news#articles'
   get '/actu/bretagne' => 'news#articles'
   get '/actu/67' => 'news#articles'

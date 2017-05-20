@@ -1,0 +1,10 @@
+<h1>Breilsass</h1>
+
+<p>Hey <%= @user.username %>,</p>
+
+<p>
+Bienvenue sur Breilsass ! Clique sur le lien ci-dessous pour activer ton compte :
+</p>
+
+<%= link_to "Activation", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
