@@ -1,0 +1,17 @@
+<html lang="fr">
+  <head>
+    <!--  title "Actualités | "  -->
+  </head>
+
+  <body>
+    <%= @rss_results.each do |article| %>
+      <div class="col-md-4 article-padding">
+      <a href="<%= article[:link] %>"><p><strong><%= article[:title] %></strong></p></a>
+      <small><p style="margin-top:-10px"> <%= article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> | <a href="https://dna.fr"><em>Source: DNA</em></a></a></p></small>
+      <p>
+      <%= article[:description] %>
+      </p>
+      </div>
+    <% end %>
+  </body>
+</html>

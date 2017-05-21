@@ -10,15 +10,9 @@ Rails.application.routes.draw do
   get 'users/new'
   get  '/signin' => 'users#new'
 
-  get '/actu/alsace' => 'news#show'
-  get '/actu/bretagne' => 'news#show'
-  get '/actu/67' => 'news#show'
-  get '/actu/68' => 'news#show'
-  get '/actu/22' => 'news#show'
-  get '/actu/29' => 'news#show'
-  get '/actu/35' => 'news#show'
-  get '/actu/56' => 'news#show'
-
+  get '/actu/alsace' => 'news#showAlsace'
+  get '/actu/bretagne' => 'news#showBretagne'
+  
   get '/bonsplans/alsace' => 'other_pages#deals'
   get '/bonsplans/bretagne' => 'other_pages#deals'
 
