@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   get '/bonsplans/alsace' => 'other_pages#deals'
   get '/bonsplans/bretagne' => 'other_pages#deals'
 
-  get '/lieux/alsace' => 'other_pages#places'
-  get '/lieux/bretagne' => 'other_pages#places'
+  get '/lieux/alsace' => 'other_pages#placesAlsace'
+  get '/lieux/bretagne' => 'other_pages#placesBretagne'
 
   get '/survie' => 'other_pages#survival'
 
