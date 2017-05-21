@@ -9,7 +9,8 @@
       <% @rss_results.each do |article| %>
         <div class="col-md-8 article-padding">
         <a href="<%= article[:link] %>"><p><strong><%= article[:title] %></strong></p></a>
-        <small><p style="margin-top:-10px"> <%= article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> | <a href="https://dna.fr"><em>Source: DNA</em></a></a></p></small>
+        <small><p style="margin-top:-10px"> <%= article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> | <a href="http://france3-regions.francetvinfo.fr/grand-est/"><em>Source: France3-regions</em></a></a></p></small>
+        <img src="<%= article[:img] %>"/>
         <p>
         <%= article[:description] %>
         </p>
