@@ -2,20 +2,31 @@
 <html lang="fr">
   <head>
     <%  title "Actualités | "  %>
-  </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-  <body>
+<body>
+
     <div class="container">
-      <% @rss_results.each do |article| %>
-        <div class="col-md-8 article-padding">
-        <a href="<%= article[:link] %>"><p><strong><%= article[:title] %></strong></p></a>
-        <small><p style="margin-top:-10px"> <%= article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> | <a href="http://france3-regions.francetvinfo.fr/grand-est/"><em>Source: France3-regions</em></a></a></p></small>
-        <img src="<%= article[:img] %>"/>
-        <p>
-        <%= article[:description] %>
-        </p>
-        </div>
-      <% end %>
-    </div>
-  </body>
+        <% @rss_results.each do |article| %>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                      <a href="<%= article[:link] %>">
+                        <h2 class="post-title">
+                            <%= article[:title] %>
+                        </h2>
+                        <h3 class="post-subtitle">
+                              <%= article[:description] %>
+                        </h3>
+                        <img src="<%= article[:img] %>"/>
+                    </a>
+                    <p class="post-meta"><%= article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> | <a href="https://dna.fr"><em>Source: DNA</em></a></a></p>
+                </div>
+                <hr>
+            </div>
+          <% end %>
+      </div>
+</body>
 </html>
