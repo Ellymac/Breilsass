@@ -19,4 +19,4 @@
 log/
 
 # Ignore application configuration
-/config/application.yml
+/config/initializers/app_env_vars.rb
