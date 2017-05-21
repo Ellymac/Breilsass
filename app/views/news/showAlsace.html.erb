@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <%  title "Actualités | "  %>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <%  title "Actualités | "  %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+  <div class="container">
+    <% @rss_results.each do |article| %>
+    <div class="col-lg-9 col-sm-6 col-lg-offset-3">
+      <a href="<%= article[:link] %>">
+        <h2 class="post-title">
+          <%= raw article[:title] %>
+        </h2>
+        <P class="post-article">
+          <%= raw article[:description] %>
+        </p>
+      </a>
+      <p class="post-meta"> <%= raw article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> |<a href="http://france3-regions.francetvinfo.fr/grand-est/"><em>Source: France 3 - régions</em</a></p>
 
-    <div class="container">
-        <% @rss_results.each do |article| %>
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                      <a href="<%= article[:link] %>">
-                        <h2 class="post-title">
-                            <%= article[:title] %>
-                        </h2>
-                        <h3 class="post-subtitle">
-                              <%= article[:description] %>
-                        </h3>
-                        <img src="<%= article[:img] %>"/>
-                    </a>
-                    <p class="post-meta"><%= article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> | <a href="https://dna.fr"><em>Source: DNA</em></a></a></p>
-                </div>
-                <hr>
-            </div>
-          <% end %>
       </div>
-</body>
-</html>
+      <div class="col-lg-9 col-sm-6">
+        <img class="img-responsive" src="<%= article[:img] %>">
+      </div>
+      <hr class="section-heading-spacer">
+      <% end %>
+    </div>
+  </body>
+
+  </html>
