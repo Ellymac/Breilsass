@@ -55,17 +55,15 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "Breilsass_#{Rails.env}"
-
-  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
      :address              => 'smtp.gmail.com',
      :port                 => 587,
+     :authentication       => :plain,
      :user_name            => ENV['gmail_username'],
      :password             => ENV['gmail_password'],
      :domain               => 'example.com',
-     :authentication       => 'plain',
      :enable_starttls_auto => true
 }
 
