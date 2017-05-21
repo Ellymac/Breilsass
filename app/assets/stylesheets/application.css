@@ -28,6 +28,20 @@
   }
 }
 
+.navbar-brand {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+body {
+  padding-top: 60px;
+}
+
 .footer {
   text-align: center;
 }

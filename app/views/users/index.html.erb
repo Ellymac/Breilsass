@@ -1,0 +1,14 @@
+<h1>Tous les membres</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+    <% @users.each do |user| %>
+    <%= link_to user.username, user %>
+    <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "delete", user, method: :delete, data: { confirm: "Vous êtes sûr ?" } %>
+    <% end %>
+    <% end %>
+</ul>
+
+<%= will_paginate %>

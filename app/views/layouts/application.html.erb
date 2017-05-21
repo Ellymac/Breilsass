@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Breilsass</title>
+  <% title "Breilsass" %>
+  <title><%= title %></title>
   <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <meta charset="utf-8">
@@ -26,7 +27,7 @@
     <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
     <!-- Static navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -35,12 +36,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../">Breilsass</a>
+          <a class="navbar-brand" href="../">BREILSASS</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actualités<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ACTUALITÉS<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-header">Régionales</li>
                 <li><a href="../actu/alsace">Alsace</a></li>
@@ -58,24 +59,40 @@
               </ul>
             </li>
             <li>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bons plans<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BONS PLANS<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="../bonsplans/alsace">Alsace</a></li>
                 <li><a href="../bonsplans/bretagne">Bretagne</a></li>
               </ul>
             </li>
             <li>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lieux à visiter<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LIEUX À VISITER<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="../lieux/alsace">Alsace</a></li>
                 <li><a href="../lieux/bretagne">Bretagne</a></li>
               </ul>
             </li>
-            <li class="active"><a href="../survie">Guide de survie</a></li>
+            <li><a href="../survie">GUIDE DE SURVIE</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../signin">S'identifier</a></li>
-            <li><a href="../contact">Contact</a></li>
+          <% if logged_in? %>
+          <li><%= link_to "UTILISATEURS", users_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">COMPTE<b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profil", current_user %></li>
+              <li><%= link_to "Paramètres", edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Se déconnecter", logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="active"><%= link_to "S'IDENTIFIER", login_path %></li>
+        <% end %>
+            <li><a href="../contact">CONTACT</a></li>
           </ul>
         </div>
       </div>
@@ -87,15 +104,15 @@
     </div>
 
     <footer class="footer">
-      <p class="text-muted">Tous droits réservés.</p>
-      <a href="../about">À propos</a>
-      <ul class="social-network social-circle">
-        <li><a target="_blank" href="http://cts-strasbourg.eu/" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-        <li><a target="_blank" href="https://facebook.com/CtsStrasbourg/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-        <li><a target="_blank" href="https://twitter.com/cts_infostrafic" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-        <li><a target="_blank" href="https://9gag.com/gag/1439500" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-      </ul>
-    </footer>
+      <p class="text-muted">Copyright &copy; Breilsass 2017
+        <a href="../about">À propos</a></p>
+        <ul class="social-network social-circle">
+          <li><a target="_blank" href="http://cts-strasbourg.eu/" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+          <li><a target="_blank" href="https://facebook.com/CtsStrasbourg/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a target="_blank" href="https://twitter.com/cts_infostrafic" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a target="_blank" href="https://9gag.com/gag/1439500" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+      </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

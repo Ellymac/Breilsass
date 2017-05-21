@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require news
+$(".nav a").on("click", function(){
+  $(".nav").find(".active").removeClass("active");
+  $(this).parent().addClass("active");
+});

@@ -1,77 +1,82 @@
 <html lang="fr">
-  <head>
-    <title>S'identifier | BREILSASS</title>
-    <script type="text/javascript" src="login.js"></script>
-    <link href="login.css" rel="stylesheet">
-  </head>
 
-  <body>
-    <%= render 'shared/error_messages' %>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="panel panel-login">
-            <div class="panel-heading">
-              <div class="row">
-                <div class="col-xs-6">
-                  <%= link_to "Connexion", login_path, :class => "active", :id => "login-form-link" %>
-                </div>
-                <div class="col-xs-6">
-                  <%= link_to "Inscription", signup_path, :id => "register-form-link" %>
-                </div>
+<head>
+  <script type="text/javascript" src="login.js"></script>
+  <link href="login.css" rel="stylesheet">
+</head>
+
+<body>
+  <%= render 'shared/error_messages' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <%= link_to "Connexion", login_path, :class => "active", :id => "login-form-link" %>
               </div>
-              <hr>
-            </div>
-
-            <div class="panel-body">
-
-              <div class="row">
-                <div class="col-lg-12" id="login-form">
-                  <%= form_for(:session, url: login_path) do |f| %>
-                    <div class="form-group">
-                      <%= f.email_field :email, placeholder: "Email", class: 'form-control' %>
-                    </div>
-                    <div class="form-group">
-                      <%= f.password_field :password, placeholder: "Mot de passe", class: 'form-control' %>
-                    </div>
-                    <div class="form-group">
-                      <%= f.submit "Se connecter", class: "btn btn-primary" %>
-                    </div>
-                  <% end %>
-                </div>
-
-                <div class="col-md-6 col-md-offset-3" id="register-form" style="display: none">
-                  <%= form_for(@user) do |f| %>
-                    <div class="form-group">
-                      <%= f.text_field :username, placeholder: "Nom d'utilisateur" %>
-                    </div>
-
-                    <div class="form-group">
-                      <%= f.email_field :email, placeholder: "Email" %>
-                    </div>
-
-                    <div class="form-group">
-                      <%= f.password_field :password, placeholder: "Mot de passe" %>
-                    </div>
-
-                    <div class="form-group">
-                      <%= f.password_field :password_confirmation, placeholder: "Confirmer mot de passe" %>
-                    </div>
-
-                    <div class="form-group">
-                      <%= f.submit "S'inscrire", class: "btn btn-primary" %>
-                    </div>
-                  <% end %>
-                </div>
+              <div class="col-xs-6">
+                <%= link_to "Inscription", signup_path, :id => "register-form-link" %>
               </div>
             </div>
-
+            <hr>
           </div>
 
+          <div class="panel-body">
 
+            <div class="row">
+              <div class="col-lg-12" id="login-form">
+                <% title "S'identifier | " %>
+                <%= form_for(:session, url: login_path) do |f| %>
+                <div class="form-group">
+                  <%= f.email_field :email, placeholder: "Email", class: 'form-control' %>
+                </div>
+                <div class="form-group">
+                  <%= f.password_field :password, placeholder: "Mot de passe", class: 'form-control' %>
+                  <%= link_to "Mot de passe oublié ?", new_password_reset_path %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :remember_me, class: "checkbox inline" do %>
+                  <%= f.check_box :remember_me %>
+                  <span>Se souvenir de moi</span>
+                </div>
+                <% end %>
+                <div class="form-group">
+                  <%= f.submit "Se connecter", class: "btn btn-primary" %>
+                </div>
+                <% end %>
+              </div>
+              <div class="col-md-6 col-md-offset-3" id="register-form" style="display: none">
+                <%= form_for(:session, url: signup_path) do |f| %>
+                <div class="form-group">
+                  <% title "S'identifier | " %>
+                  <%= f.text_field :username, placeholder: "Nom d'utilisateur" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.email_field :email, placeholder: "Email" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.password_field :password, placeholder: "Mot de passe" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.password_field :password_confirmation, placeholder: "Confirmer mot de passe" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.submit "S'inscrire", class: "btn btn-primary" %>
+                </div>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+</body>
 </html>
