@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get '/actu/alsace' => 'news#showAlsace'
   get '/actu/bretagne' => 'news#showBretagne'
-  
+
   get '/bonsplans/alsace' => 'other_pages#deals'
   get '/bonsplans/bretagne' => 'other_pages#deals'
 
