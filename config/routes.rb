@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'news/new'
+
   root 'static_pages#home'
 
   get 'contact' => 'static_pages#contact'
@@ -13,15 +15,9 @@ Rails.application.routes.draw do
   get 'password_resets/new'
   get 'password_resets/edit'
 
-  get '/actu/alsace' => 'news#articles'
-  get '/actu/bretagne' => 'news#articles'
-  get '/actu/67' => 'news#articles'
-  get '/actu/68' => 'news#articles'
-  get '/actu/22' => 'news#articles'
-  get '/actu/29' => 'news#articles'
-  get '/actu/35' => 'news#articles'
-  get '/actu/56' => 'news#articles'
-
+  get '/actu/alsace' => 'news#showAlsace'
+  get '/actu/bretagne' => 'news#showBretagne'
+  
   get '/bonsplans/alsace' => 'other_pages#deals'
   get '/bonsplans/bretagne' => 'other_pages#deals'
 
