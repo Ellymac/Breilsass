@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
         redirect_back_or @user
       else
-        message  = "Compte non activé."
+        message  = "Compte non activé. "
         message += "Merci de vérifier votre boîte mail pour activer votre compte."
         flash[:warning] = message
         redirect_to root_url

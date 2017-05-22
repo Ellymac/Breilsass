@@ -1,1 +1,7 @@
-<%= @user.username %>, <%= @user.email %>
+<% title "Profil | " %>
+
+<h1>Votre profil</h1>
+
+<p>Nom d'utilisateur : <%= @user.username %></p>
+<p>Email : <%= @user.email %></p>
+<p>Admin : <%= @user.admin %></p>
