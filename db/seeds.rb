@@ -13,3 +13,16 @@
   admin:     true,
   activated: true,
   activated_at: Time.zone.now)
+
+  50.times do |n|
+    name  = Faker::Name.name
+    email = "example-#{n+1}@elsass.bzh"
+    password = "password"
+    User.create!(username:  name,
+                 email: email,
+                 password:              password,
+                 password_confirmation: password,
+                 admin: false,
+                 activated: true,
+                 activated_at: Time.zone.now)
+  end

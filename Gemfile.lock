@@ -55,6 +55,8 @@ GEM
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -174,6 +176,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 0.0.10)
   byebug
   coffee-rails (~> 4.2)
+  faker
   figaro
   haml
   jbuilder (~> 2.5)
