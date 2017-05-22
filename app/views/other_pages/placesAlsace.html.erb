@@ -1,8 +1,89 @@
 <head>
     <% title "Lieux | " %>
-    <!-- <link href="places.css" rel="stylesheet"> -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxl_-I-pvSPfoErQWaq7nLuNlhP-118h0&callback=initMapA"></script>
 </head>
 
 <body>
+  <div id="map" style="width:100%;height:500px"></div>
 
+    <a id="strasbourg"></a>
+    <div class="row">
+      <div class="box">
+        <div class="col-lg-12">
+          <hr><h2 class="intro-text text-center">
+            <strong>Straßburg</strong>
+          </h2></hr>
+          <hr class="visible-xs">
+          <p>Localisation : Strasbourg, entre la France et l'Allemagne.
+          <p>Petite France, cathédrale Notre-Dame, Parlement européen, DM à Kehl...</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="box">
+        <div class="col-lg-12 text-center">
+          <div id="carousel-example-generic1" class="carousel slide">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class=" img-responsive2 img-full" src="../crozon.jpg" alt="">
+              </div>
+              <div class="item">
+                <img class="img-responsive2 img-full" src="../crozon2.jpg" alt="" >
+              </div>
+              <div class="item">
+                <img class="img-responsive2 img-full" src="../crozon3.jpg" alt="">
+              </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic1" data-slide="prev">
+              <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic1" data-slide="next">
+              <span class="icon-next"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a id="chateau"></a>
+    <div class="row">
+      <div class="box">
+        <div class="col-lg-12">
+          <hr><h2 class="intro-text text-center">
+            <strong>Le château du Haut-Kœnigsbourg</strong>
+          </h2></hr>
+          <hr class="visible-xs">
+          <p>Localisation : Orschwiller, près de Colmar.
+          <p>Basilique (début des travaux fin du XIIème siècle), style médiéval.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="box">
+        <div class="col-lg-12 text-center">
+          <div id="carousel-example-generic2" class="carousel slide">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class="img-responsive2 img-full" src="../anne.jpg" alt="">
+              </div>
+              <div class="item">
+                <img class="img-responsive2 img-full" src="../anne2.jpg" alt="" >
+              </div>
+              <div class="item">
+                <img class="img-responsive2 img-full" src="../anne3.jpg" alt="">
+              </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic2" data-slide="prev">
+              <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic2" data-slide="next">
+              <span class="icon-next"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
