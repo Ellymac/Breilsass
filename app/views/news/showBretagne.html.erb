@@ -15,12 +15,11 @@
         <a href="<%= article[:link] %>">
           <h2 class="post-title">
             <%= raw article[:title] %>
-          </h2>
+          </h2></a>
           <p class="post-subtitle">
             <%= raw article[:description] %>
           </p>
-        </a>
-          <p class="post-meta"><%= raw article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> |  <a href="https://www.ouest-france.fr"><em>Source: Ouest France</em></a></p>
+          <p class="post-meta"><%= raw article[:pubDate].strftime("Publié le %d/%m/%Y à %R") %> |  <a href="https://www.ouest-france.fr"><em>Source : Ouest-France</em></a></p>
         </div>
       </div>
       <div class="col-lg-9 col-sm-6">
