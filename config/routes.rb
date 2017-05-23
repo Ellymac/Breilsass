@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get '/newarticle' => 'other_pages#new'
   post '/newarticle', to: 'other_pages#create'
 
+  put '/users' => 'users#up_admin'
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]

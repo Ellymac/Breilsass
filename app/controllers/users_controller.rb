@@ -41,6 +41,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def up_admin
+    if params[:u]
+      user = User.find(params[:u])
+      user.admin = true
+      user.save
+      flash[:success] = "Utilisateur promu admin !"
+      redirect_to users_url
+    end
+  end
+
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "Utilisateur supprimé !"

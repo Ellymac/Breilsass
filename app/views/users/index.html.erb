@@ -6,8 +6,9 @@
     <% @users.each do |user| %>
     <p></p>
     <%= link_to user.username, user %>
-    <% if current_user.admin? && !current_user?(user) %>
+    <% if current_user.admin? && !current_user?(user) && !user.admin? %>
     | <%= link_to "(supprimer)", user, method: :delete, data: { confirm: "Vous êtes sûr ?" } %>
+      <%= link_to "(promouvoir admin)", {:action => controller.up_admin, :u => user}, {:method => :put , data: { confirm: "Vous êtes sûr ?" }} %>
     <% end %>
     <% end %>
 </ul>
