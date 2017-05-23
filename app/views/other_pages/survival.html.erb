@@ -3,6 +3,9 @@
 
 <body>
   <div class="container">
+    <% if current_user.admin? %>
+      <p> <%= link_to "Ajouter un article", '/newarticle' %></p>
+    <% end %>
     <% @articles.each do |art| %>
     <div class="row">
       <div class="box">
