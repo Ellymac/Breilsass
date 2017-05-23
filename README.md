@@ -38,3 +38,6 @@ rails server
 * **ESTEOULLE Thomas** *(TPS)*
 * **PINCEMIN Renan** *(TPS)*
 * **SCHNELL Camille** *(ENSIIE)*
+
+
+Bibliographie : *Ruby on Rails Tutorial (Rails 5)* de Michael Hartl
