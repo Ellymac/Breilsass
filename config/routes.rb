@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/lieux/alsace' => 'other_pages#placesAlsace'
   get '/lieux/bretagne' => 'other_pages#placesBretagne'
 
+  get '/allcomments', to: 'comments#show'
   post '/allcomments', to: 'comments#show'
   post '/comment', to: 'comments#new'
   post '/comments', to: 'comments#create'

@@ -14,6 +14,30 @@
   activated: true,
   activated_at: Time.zone.now)
 
+  User.create!(username:  "Camille",
+  email: "camille@elsass.bzh",
+  password:              "12345678",
+  password_confirmation: "12345678",
+  admin:     true,
+  activated: true,
+  activated_at: Time.zone.now)
+
+  User.create!(username:  "Thomas",
+  email: "estouille@elsass.bzh",
+  password:              "abcdef",
+  password_confirmation: "abcdef",
+  admin:     true,
+  activated: true,
+  activated_at: Time.zone.now)
+
+  User.create!(username:  "Renan",
+  email: "renan@elsass.bzh",
+  password:              "a1b2c3",
+  password_confirmation: "a1b2c3",
+  admin:     true,
+  activated: true,
+  activated_at: Time.zone.now)
+
   Article.create!(title: "La flammekueche", content:"<p>Alors amis bretons, l'odeur du feu d'une cheminée vous attire ? Vous auriez bien envie de manger une flammekueche non ?</p>
   <p>Allez-y, laissez-vous tenter par ce met délicieux mais gare à vous ! Jamais, au grand jamais ne prononcez ce mot.</p>
   <p>Tarte flambée, voilà comment vous devez l'appeler si vous ne voulez pas vous ramasser un coup par un Alsacien fervant de sa langue.</p>", image: "flammekueche.jpg", user_id: 1)
@@ -58,7 +82,7 @@
   <p>À part le fait que ce soit en alsacien et avec un nom imprononçable, c'est quand même entraînant non ?</p>
   <p>Alors, une préférence ?</p>", image: "", user_id: 1)
 
-  49.times do |n|
+  46.times do |n|
     name  = Faker::Name.name
     email = "example-#{n+1}@elsass.bzh"
     password = "password"
@@ -72,5 +96,11 @@
   end
 
   Comment.create!(body: "Je suis d'accord ! Je préfère prononcer 'tarte flambée'", user_id: 4, article_id: 1)
-  Comment.create!(body: "Chez moi on dit crêpe salée ! C'est grave ?", user_id: 10, article_id: 2)
-  Comment.create!(body: "C'est très grave !!", user_id: 14, article_id: 2)
+  Comment.create!(body: "Chez moi on dit crêpe salée ! C'est grave ?", user_id: 3, article_id: 2)
+  Comment.create!(body: "C'est très grave !!", user_id: 4, article_id: 2)
+  Comment.create!(body: "Perso je m'en fous tant que ça se mange ;)", user_id: 2, article_id: 2)
+  Comment.create!(body: "Chez moi on dit 'ça tire' quand il y a du courant d'air", user_id: 2, article_id: 3)
+  Comment.create!(body: "Super site ! On en apprend tous les jours !", user_id: 14, article_id: 4)
+  Comment.create!(body: "Dr Hans im Schnòckeloch hät àlles, wàs er will !", user_id: 8, article_id: 5)
+  Comment.create!(body: "Oh nan je l'ai en tête !", user_id: 22, article_id: 5)
+  Comment.create!(body: "J'entends le loup, le renard et la belette !", user_id: 4, article_id: 5)
