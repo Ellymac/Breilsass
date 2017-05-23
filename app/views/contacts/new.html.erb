@@ -1,41 +1,41 @@
 <!-- <% title "Contact | " %>
 
 <div align="center">
-  <h3>Nous contacter</h3>
+<h3>Nous contacter</h3>
 
-  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-    <%= f.input :name, :required => true %>
-    <%= f.input :email, :required => true %>
-    <%= f.input :message, :as => :text, :required => true %>
-    <div>
-      </br>
-      <%= f.button :submit, 'Envoyer', :class=> "btn btn-primary" %>
-    </div>
-  <% end %>
+<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+<%= f.input :name, :required => true %>
+<%= f.input :email, :required => true %>
+<%= f.input :message, :as => :text, :required => true %>
+<div>
+</br>
+<%= f.button :submit, 'Envoyer', :class=> "btn btn-primary" %>
+</div>
+<% end %>
 </div> -->
 
 <% title "Contact | " %>
 <div class="col-md-5">
   <div class="form-area">
-  <h3>Nous contacter</h3>
-      <%= simple_form_for(@contact) do |f| %>
-      <div class="form-group">
-        <%= f.text_field :name, :required => true, placeholder: "Nom", class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.email_field :email, :required => true, placeholder: "Email", class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.text_field :subject, :as => :text, :required => true, placeholder: "Objet", class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.text_field :message, :as => :text, :required => true, placeholder: "Message", class: 'form-control', maxlenght: "140", rows: "7" %>
-        <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-        <span class="help-block"><p id="characterLeft" class="help-block ">Vous avez atteint la limite</p></span>
-      </div>
-      <h3>
+    <h3>Nous contacter</h3>
+    <%= simple_form_for(@contact) do |f| %>
+    <div class="form-group">
+      <%= f.text_field :name, :required => true, placeholder: "Nom", class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.email_field :email, :required => true, placeholder: "Email", class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :subject, :as => :text, :required => true, placeholder: "Objet", class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :message, :as => :text, :required => true, placeholder: "Message", class: 'form-control', maxlength:140,size:3, rows:7, :style => "height:200px ;"   %>
+    </div>
+    <!--   <span class="help-block"><p id="characterLeft" class="help-block ">Vous avez atteint la limite</p></span>-->
+    <p  class="help-block">Vous avez 140 caractères maximum</p>
+    <h3>
       <%= f.submit "Envoyer", class: "btn btn-primary" %>
-      </h3>
-      <% end %>
-</div>
+    </h3>
+    <% end %>
+  </div>
 </div>
