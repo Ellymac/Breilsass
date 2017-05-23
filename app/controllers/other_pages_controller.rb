@@ -1,6 +1,5 @@
 class OtherPagesController < ApplicationController
   def show
-    # @articles = Article.paginate :page => params[:page], :per_page => 2, :order => 'id DESC'
     @articles = Article.page(params[:page]).order('created_at DESC').per_page(2)
   end
 

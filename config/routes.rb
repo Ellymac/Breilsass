@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
-  get 'news/new'
-
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
   get 'contacts' => 'contacts#new'
 
-  get 'users/new'
   get  '/signup' => 'users#new'
   get 'sessions/new'
   get    '/login',   to: 'sessions#new'
