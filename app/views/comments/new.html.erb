@@ -1,0 +1,15 @@
+<% title "Commentaire | " %>
+<div class="col-md-5">
+  <div class="form-area">
+  <h3>Commenter</h3>
+      <%= simple_form_for(@comment) do |f| %>
+      <div class="form-group">
+        <%= f.hidden_field :article, value: @article.id %>
+        <%= f.text_field :body, :as => :text, :required => true, placeholder: "Votre commentaire", class: 'form-control', maxlength: "140", rows: "7" %>
+      </div>
+      <h3>
+      <%= f.submit "Envoyer", class: "btn btn-primary" %>
+      </h3>
+      <% end %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div>
+  <% flash.each do |key, value| %>
+    <div>
+      <a href="#" data-dismiss="alert">×</a>
+        <%= value %>
+        <p> <%= link_to "Retour aux articles", '/survie' %></p>
+    </div>
+  <% end %>
+</div>

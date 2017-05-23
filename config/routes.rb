@@ -23,6 +23,10 @@ Rails.application.routes.draw do
 
   get '/survie' => 'other_pages#survival'
 
+  post '/allcomments', to: 'comments#show'
+  post '/comment', to: 'comments#new'
+  post '/comments', to: 'comments#create'
+
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
