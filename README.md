@@ -14,7 +14,7 @@ git clone https://github.com/Ellymac/Breilsass.git
 bundle install
 ```
 
-* Créer la base de données (avec 50 utilisateurs dont 1 admin) :
+* Créer la base de données (avec 50 utilisateurs dont 4 admins) :
 
 ```
 rails db:create
