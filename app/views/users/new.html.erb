@@ -57,7 +57,7 @@
                     <div class="form-group">
                       <%= f.password_field :password_confirmation, placeholder: "Confirmer mot de passe", class: 'form-control' %>
                     </div>
-
+                <%= f.hidden_field :admin, value: false %>
                     <div class="form-group">
                       <%= f.submit "S'inscrire", class: "btn btn-primary" %>
                     </div>

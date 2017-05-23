@@ -15,7 +15,7 @@
   activated_at: Time.zone.now)
 
   50.times do |n|
-    name  = Faker::Name.name
+    name  = Faker::Superhero.name
     email = "example-#{n+1}@elsass.bzh"
     password = "password"
     User.create!(username:  name,

@@ -50,11 +50,10 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
-
   # Sets the password reset attributes.
   def create_reset_digest
     self.reset_token = User.new_token
-    update_columns(reset_digest:  true, reset_sent_at: Time.zone.now)
+    update_columns(reset_digest: true, reset_sent_at: Time.zone.now)
   end
 
   # Sends password reset email.
