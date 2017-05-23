@@ -31,7 +31,7 @@
   <p>- des schlapps/schloppeuh = des chaussons</p>
   <p>- hopla = ouf (onomatopée de soulagement)</p>
   <p>- a guete ('goueteuh') = bon appétit ! Ce à quoi on répond \"a bessere\".</p>
-  <p>- jetzt geht's los, là c'est plus dure de comprendre ! Bon allez ça veut dire \"let's go!\".</p>
+  <p>- jetzt geht's los, là c'est plus dur de comprendre ! Bon allez ça veut dire \"let's go!\".</p>
   <p>Je vous laisse profiter d'une liste plutôt immense d'expressions avec leur signification (en français ouf) et même la prononciation pour les plus motivés d'entre vous ! <a href=\"http://www.orthal.fr/expressions.php\"><em>Expressions Alsaciennes</em></a></p>
   <p></p>
   <p>Ouf j'ai failli oublier le plus important ! Il faut <b>impérativement</b> finir toutes ses phrases par \"Allez Racing !\".</p>
