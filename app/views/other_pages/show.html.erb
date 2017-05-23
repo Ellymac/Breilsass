@@ -4,7 +4,7 @@
 <body>
   <div class="container">
     <% if current_user && current_user.admin? %>
-      <p> <%= link_to "Ajouter un article", '/newarticle' %></p>
+      <p>  <button type="button" class="btn btn-primary" onclick="window.location.href='http://localhost:3000/newarticle'">Ajouter un article</button>
     <% end %>
     <% @articles.each do |art| %>
     <div class="row">
@@ -19,12 +19,10 @@
             <img class="img-responsive2 img-border img-left" src="<%= art[:image] %>" alt="">
           <% end %>
           <p> <%= raw art[:content] %> </p>
-          <% if current_user %>
-          <p> <%= link_to "Commenter", '/comment?' + {art: art[:id]}.to_param, method: :post
-            %></p>
+          <p><% if current_user %>
+            <%= link_to "Commenter", '/comment?' + {art: art[:id]}.to_param, method: :post, :class => "commenter"%>
           <% end %>
-          <p> <%= link_to "Commentaires", '/allcomments?' + {art: art[:id]}.to_param, method: :post
-            %></p>
+          <%= link_to "Commentaires", '/allcomments?' + {art: art[:id]}.to_param, method: :post, :class => "commentaire"%></p>
         </div>
       </div>
     </div>

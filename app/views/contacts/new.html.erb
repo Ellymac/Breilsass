@@ -29,7 +29,7 @@
       <%= f.text_field :subject, :as => :text, :required => true, placeholder: "Objet", class: 'form-control' %>
     </div>
     <div class="form-group">
-      <%= f.text_field :message, :as => :text, :required => true, placeholder: "Message", class: 'form-control', maxlength:140,size:3, rows:7, :style => "height:200px ;"   %>
+      <%= f.text_field :message, :as => :text, :required => true ,placeholder: "Message", class: 'form-control message', maxlength:140, rows:7   %>
     </div>
     <!--   <span class="help-block"><p id="characterLeft" class="help-block ">Vous avez atteint la limite</p></span>-->
     <p  class="help-block">Vous avez 140 caractères maximum</p>

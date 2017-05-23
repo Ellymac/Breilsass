@@ -58,8 +58,8 @@
   <p>À part le fait que ce soit en alsacien et avec un nom imprononçable, c'est quand même entraînant non ?</p>
   <p>Alors, une préférence ?</p>", image: "", user_id: 1)
 
-  50.times do |n|
-    name  = Faker::Superhero.name
+  49.times do |n|
+    name  = Faker::Name.name
     email = "example-#{n+1}@elsass.bzh"
     password = "password"
     User.create!(username:  name,

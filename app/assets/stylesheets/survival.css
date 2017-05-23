@@ -36,3 +36,30 @@
   float: right;
   margin-right: 25px;
 }
+
+input.message{
+  height:200px ;
+}
+
+.commenter{
+  text-align: center;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 130px ;
+  border: 3px #337AB7 solid;
+  float: left;
+}
+.commentaire{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 150px ;
+  border: 3px #337AB7 solid;
+  float: left;
+}
