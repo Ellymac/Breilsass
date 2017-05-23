@@ -21,6 +21,27 @@
   }
 }
 
+h1, h3 {
+  text-align: center;
+}
+
+h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+body {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: #000;
+}
+
 .field_with_errors {
   @extend .has-error;
   .form-control {
@@ -38,12 +59,41 @@
     letter-spacing: 3px;
 }
 
-body {
-  padding-top: 60px;
-}
-
 .footer {
   text-align: center;
+}
+
+
+.hidden { display: none; }
+
+/*flash*/
+
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
 }
 
 /* footer social icons */
