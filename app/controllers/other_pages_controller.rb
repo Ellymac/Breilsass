@@ -13,9 +13,9 @@ class OtherPagesController < ApplicationController
     @article.title = params[:article][:title]
     @article.content = params[:article][:content]
     @article.user_id = current_user.id
-    puts @article.title
-    puts @article.content
-    puts @article.user.username
+    if params[:article][:image]
+      @article.image = params[:article][:image]
+    end
     if @article.save
       flash.now[:success] = "Votre article a bien été créé."
     else
