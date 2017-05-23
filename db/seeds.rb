@@ -70,3 +70,7 @@
                  activated: true,
                  activated_at: Time.zone.now)
   end
+
+  Comment.create!(body: "Je suis d'accord ! Je préfère prononcer 'tarte flambée'", user_id: 4, article_id: 1)
+  Comment.create!(body: "Chez moi on dit crêpe salée ! C'est grave ?", user_id: 10, article_id: 2)
+  Comment.create!(body: "C'est très grave !!", user_id: 14, article_id: 2)
