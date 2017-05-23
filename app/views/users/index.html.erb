@@ -5,10 +5,10 @@
 <ul class="users">
     <% @users.each do |user| %>
     <p></p>
-    <%= link_to user.username, user %>
+    <%= link_to user.username, user, :class => "name" %>
     <% if current_user.admin? && !current_user?(user) && !user.admin? %>
-    | <%= link_to "(supprimer)", user, method: :delete, data: { confirm: "Vous êtes sûr ?" } %>
-      <%= link_to "(promouvoir admin)", {:action => controller.up_admin, :u => user}, {:method => :put , data: { confirm: "Vous êtes sûr ?" }} %>
+    | <em><%= link_to "(supprimer)", user, method: :delete, :class =>"admin", data: { confirm: "Vous êtes sûr ?" } %>
+      <%= link_to "(promouvoir admin)", {:action => controller.up_admin, :u => user}, {:method => :put , :class => "admin", data: { confirm: "Vous êtes sûr ?" }} %></em>
     <% end %>
     <% end %>
 </ul>
