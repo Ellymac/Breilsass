@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   post '/comment', to: 'comments#new'
   post '/comments', to: 'comments#create'
 
+  get '/newarticle', to: 'other_pages#newarticle'
+
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
