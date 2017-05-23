@@ -3,7 +3,7 @@
 
 <body>
   <div class="container">
-    <% if current_user.admin? %>
+    <% if current_user && current_user.admin? %>
       <p> <%= link_to "Ajouter un article", '/newarticle' %></p>
     <% end %>
     <% @articles.each do |art| %>
@@ -30,6 +30,7 @@
     </div>
     <% end %>
   </div>
+  <%= will_paginate @articles, :previous_label => 'Précédent', :next_label => 'Suivant' %>
 </body>
 
 </html>

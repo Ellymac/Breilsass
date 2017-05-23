@@ -16,11 +16,11 @@
 
   Article.create!(title: "La flammekueche", content:"<p>Alors amis bretons, l'odeur du feu d'une cheminée vous attire ? Vous auriez bien envie de manger une flammekueche non ?</p>
   <p>Allez-y, laissez-vous tenter par ce met délicieux mais gare à vous ! Jamais, au grand jamais ne prononcez ce mot.</p>
-  <p>Tarte flambée, voilà comment vous devez l'appeler si vous ne voulez pas vous ramasser un coup par un Alsacien fervant de sa langue.</p>", image: "flammekueche.jpg")
+  <p>Tarte flambée, voilà comment vous devez l'appeler si vous ne voulez pas vous ramasser un coup par un Alsacien fervant de sa langue.</p>", image: "flammekueche.jpg", user_id: 1)
 
   Article.create!(title: "Les galettes et les crêpes", content:"<p>Si je dis \"Bretagne\", je sais que la première chose à laquelle vous pensez ce sont les galettes et les crêpes. L'odeur de la pâte et l'arôme de celles-ci !</p>
   <p>Par contre, soyez vigilants sur les mots que vous employez : les Bretons sont gentils sauf quand on se trompe dans leur vocabulaire !!!</p>
-  <p>Salé = galette, sucré = crêpe ! Notez bien ça quelque part avant d'y aller. Certains ont seulement été refusés d'un restaurant, mais sachez que d'autres ont fini en kouign amann !</p>", image: "galette.jpg")
+  <p>Salé = galette, sucré = crêpe ! Notez bien ça quelque part avant d'y aller. Certains ont seulement été refusés d'un restaurant, mais sachez que d'autres ont fini en kouign amann !</p>", image: "galette.jpg", user_id: 1)
 
   Article.create!(title: "L'Alsace oui !! La langue euhhhhhh...", content:"<p>Je pourrais vous faire peur directement avec des mots proches de l'allemand, je vous imagine déja partir en courant ! Donc commençons sobrement.</p>
   <p>Si votre boss vous dit: \"Vous avez libre mercredi\", chanceux que vous êtes, il vous laisse votre mercredi.</p>
@@ -35,7 +35,7 @@
   <p>Je vous laisse profiter d'une liste plutôt immense d'expressions avec leur signification (en français ouf) et même la prononciation pour les plus motivés d'entre vous ! <a href=\"http://www.orthal.fr/expressions.php\"><em>Expressions Alsaciennes</em></a></p>
   <p></p>
   <p>Ouf j'ai failli oublier le plus important ! Il faut <b>impérativement</b> finir toutes ses phrases par \"Allez Racing !\".</p>
-  <p>Je pense qu'on est bon, vous voilà paré pour visiter l'Alsace.</p>", image: "homer.jpg")
+  <p>Je pense qu'on est bon, vous voilà paré pour visiter l'Alsace.</p>", image: "homer.jpg", user_id: 1)
 
   Article.create!(title: "Est-ce que tu sais parler breton ?", content:"<p>Vous êtes prêts ?</p>
   <p>- Bin alors, t'as pu acheter de la liche pour qu'on puisse aller en riboule ce soir ?</p>
@@ -48,7 +48,7 @@
   <p>- une cuche (une queue de cheval)</p>
   <p>- un pekno (un cassos)</p>
   <p>- baraguiner (parler sans se faire comprendre)</p>
-  <p>Mais je vous laisse le \"plaisir\" d'affronter ces expressions lorsque vous croiserez la route d'un breton !</p>", image: "alaise.jpg")
+  <p>Mais je vous laisse le \"plaisir\" d'affronter ces expressions lorsque vous croiserez la route d'un breton !</p>", image: "alaise.jpg", user_id: 1)
 
   Article.create!(title: "Parlons peu, parlons c... musique !", content:"<p>La Bretagne, région où se trouve les plus grands danseurs de petit doigt !</p>
   <p>Ils ont quand même un avantage, leurs musiques entrainantes ne peuvent que vous faire danser ! Par exemple :</p>
@@ -56,7 +56,7 @@
   <p>Mais les Alsaciens aussi ont de quoi se défendre ! Comme ce qui suit :</p>
   <p><iframe center width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/u_QnyaIUWEs?rel=0&amp;controls=0\" frameborder=\"0\" allowfullscreen></iframe></p>
   <p>À part le fait que ce soit en alsacien et avec un nom imprononçable, c'est quand même entraînant non ?</p>
-  <p>Alors, une préférence ?</p>", image: "")
+  <p>Alors, une préférence ?</p>", image: "", user_id: 1)
 
   50.times do |n|
     name  = Faker::Superhero.name

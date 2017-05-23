@@ -5,8 +5,6 @@ class CommentsController < ApplicationController
   end
 
   def create
-    # puts @user.username
-    # @article = Article.find(params[:art])
     @comment = Comment.new
     @comment.body = params[:comment][:body]
     @comment.user = current_user

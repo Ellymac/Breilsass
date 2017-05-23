@@ -1,8 +1,25 @@
 class OtherPagesController < ApplicationController
-  def survival
-    @articles = Article.all
+  def show
+    # @articles = Article.paginate :page => params[:page], :per_page => 2, :order => 'id DESC'
+    @articles = Article.page(params[:page]).order('created_at DESC').per_page(2)
   end
 
-  def newarticle
+  def new
+    @article = Article.new
+  end
+
+  def create
+    @article = Article.new
+    @article.title = params[:article][:title]
+    @article.content = params[:article][:content]
+    @article.user_id = current_user.id
+    puts @article.title
+    puts @article.content
+    puts @article.user.username
+    if @article.save
+      flash.now[:success] = "Votre article a bien été créé."
+    else
+      render 'new'
+    end
   end
 end

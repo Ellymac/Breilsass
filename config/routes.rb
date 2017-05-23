@@ -21,13 +21,13 @@ Rails.application.routes.draw do
   get '/lieux/alsace' => 'other_pages#placesAlsace'
   get '/lieux/bretagne' => 'other_pages#placesBretagne'
 
-  get '/survie' => 'other_pages#survival'
-
   post '/allcomments', to: 'comments#show'
   post '/comment', to: 'comments#new'
   post '/comments', to: 'comments#create'
 
-  get '/newarticle', to: 'other_pages#newarticle'
+  get '/survie' => 'other_pages#show'
+  get '/newarticle' => 'other_pages#new'
+  post '/newarticle', to: 'other_pages#create'
 
   resources :users
   resources :account_activations, only: [:edit]
