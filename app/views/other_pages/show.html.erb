@@ -18,7 +18,7 @@
           <% if art[:image] %>
             <img class="img-responsive2 img-border img-left" src="<%= art[:image] %>" alt="">
           <% end %>
-          <%= raw art[:content] %>
+          <p> <%= raw art[:content] %> </p>
           <% if current_user %>
           <p> <%= link_to "Commenter", '/comment?' + {art: art[:id]}.to_param, method: :post
             %></p>
