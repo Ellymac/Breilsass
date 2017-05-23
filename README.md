@@ -3,20 +3,33 @@
 
 ## Instructions d'installation (pré-requis)
 
+* Récupérer le dépôt Git :
+```
+git clone https://github.com/Ellymac/Breilsass.git
+```
+
 * Installer les gems nécessaires :
 
 ```
 bundle install
 ```
 
-* Réinitialiser la base de données (avec création de 50 utilisateurs dont 1 admin) :
+* Créer la base de données (avec 50 utilisateurs dont 1 admin) :
 
 ```
-rails db:migrate:reset
-rails db:seed
-rails db:migrate
+rails db:create
 ```
 
+* Créer un fichier contenant les identifiants Gmail :
+```
+cd config/initializers/
+touch app_env_vars.rb
+```
+et mettre ceci dans ce fichier
+```
+ENV['MAILER_EMAIL'] = 'votre_adresse@gmail.com'
+ENV['MAILER_PASSWORD'] = 'votre_mot_de_passe'
+```
 
 ## Instructions d'utilisation
 
@@ -40,4 +53,4 @@ rails server
 * **SCHNELL Camille** *(ENSIIE)*
 
 
-Bibliographie : *Ruby on Rails Tutorial (Rails 5)* de Michael Hartl
+Pour la gestion des utilisateurs, nous nous sommes aidés de l'ouvrage *Ruby on Rails Tutorial (Rails 5)* de Michael Hartl.
