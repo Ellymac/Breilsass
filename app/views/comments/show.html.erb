@@ -1,6 +1,9 @@
+<h1 class="comment">Commentaires :</h1>
+<div class="hrComment"></div>
 <% @comments.each do |comment| %>
 
-<h1> <%= comment.user.username %> </h1>
-<p> <%= comment.body %> </p>
+<p class="commentary"> <%= comment.body %> </p>
+<p class="published"><em>Posté par :</em> <b> <%= comment.user.username %> </b><%=comment.created_at.strftime("le %d/%m/%Y à %R")%> </p>
+<div class="hrComment"></div>
 
 <% end %>
