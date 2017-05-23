@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521145313) do
+ActiveRecord::Schema.define(version: 20170522202900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,32 @@ ActiveRecord::Schema.define(version: 20170521145313) do
     t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.string   "title"
+    t.text     "body"
+    t.string   "subject"
+    t.integer  "user_id",          null: false
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "microposts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at", using: :btree
+    t.index ["user_id"], name: "index_microposts_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,4 +63,5 @@ ActiveRecord::Schema.define(version: 20170521145313) do
     t.datetime "reset_sent_at"
   end
 
+  add_foreign_key "microposts", "users"
 end
